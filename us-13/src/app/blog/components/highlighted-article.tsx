@@ -34,7 +34,7 @@ export const HighlightedArticle = () => {
       {!loading && posts?.response?.docs?.length > 0 && (
         <>
           <img
-            className="md:w-full md:h-[228px] md:object-cover md:object-center rounded-md"
+            className="md:w-full md:h-96 md:object-cover md:object-center rounded-md"
             src={coverPicture}
             alt=""
           />
