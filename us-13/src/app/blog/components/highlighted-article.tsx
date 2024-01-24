@@ -1,10 +1,10 @@
 import { usePosts } from "@/app/blog/contexts/PostContext";
 
 export const HighlightedArticle = () => {
-  const { loading, posts, convertDate }: any = usePosts();
-  const coverPicture = posts?.response?.docs?.[0]?.coverPicture;
-  const startDate = posts?.response?.docs?.[0]?.startDate;
-  const title = posts?.response?.docs?.[0]?.title;
+  const { loading, posts, convertDate, originalPosts }: any = usePosts();
+  const coverPicture = originalPosts?.response?.docs?.[0]?.coverPicture;
+  const startDate = originalPosts?.response?.docs?.[0]?.startDate;
+  const title = originalPosts?.response?.docs?.[0]?.title;
 
   return (
     <div className="pb-10 xl:pb-16">
@@ -31,7 +31,7 @@ export const HighlightedArticle = () => {
           </svg>
         </div>
       )}
-      {!loading && posts?.response?.docs?.length > 0 && (
+      {!loading && originalPosts?.response?.docs?.length > 0 && (
         <>
           <img
             className="md:w-full md:h-96 md:object-cover md:object-center rounded-md"
