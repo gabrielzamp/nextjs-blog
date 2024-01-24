@@ -1,7 +1,7 @@
 import { usePosts } from "@/app/blog/contexts/PostContext";
 
 export const HighlightedArticle = () => {
-  const { loading, posts, convertDate } = usePosts();
+  const { loading, posts, convertDate }: any = usePosts();
   const coverPicture = posts?.response?.docs?.[0]?.coverPicture;
   const startDate = posts?.response?.docs?.[0]?.startDate;
   const title = posts?.response?.docs?.[0]?.title;
