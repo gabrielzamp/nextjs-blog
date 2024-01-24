@@ -20,7 +20,7 @@ export const PostContext = createContext<PostContextType | null>(null);
 
 export const PostProvider = ({ children }: { children: ReactNode }) => {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [originalPosts, setOriginalPosts] = useState<Post[]>([]);
 
   function convertDate(isoDate: Date) {
