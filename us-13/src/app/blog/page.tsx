@@ -10,7 +10,7 @@ export default function Home() {
       <div className="w-full bg-[#1A1A1A] ">
         <div className="w-10/12 mx-auto py-5 xl:w-8/12">
           <div className="border-t border-white border-b mb-10">
-            <h1 className="text-7xl uppercase text-center my-2 lg:text-9xl">
+            <h1 className="text-7xl uppercase font-bold text-center my-2 lg:text-9xl lg:text-left">
               Blog
             </h1>
           </div>

@@ -4,8 +4,8 @@ import React, {
   useContext,
   useEffect,
   useState,
-} from "react";
-import { Post } from "@/app/blog/types/Post";
+} from 'react';
+import { Post } from '@/app/blog/types/Post';
 
 type PostContextType = {
   posts: Post[];
@@ -24,17 +24,17 @@ export const PostProvider = ({ children }: { children: ReactNode }) => {
   const [originalPosts, setOriginalPosts] = useState<Post[]>([]);
 
   function convertDate(isoDate: Date) {
-    return new Date(isoDate).toLocaleDateString("pt-BR", {
-      weekday: "long",
-      day: "numeric",
-      month: "short",
-      year: "numeric",
+    return new Date(isoDate).toLocaleDateString('pt-BR', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
     });
   }
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://institucional.conasems.simoa.dev/noticias/")
+    fetch('https://institucional.conasems.simoa.dev/noticias/')
       .then((res) => res.json())
       .then((json) => {
         setPosts(json);
@@ -42,7 +42,7 @@ export const PostProvider = ({ children }: { children: ReactNode }) => {
         setLoading(false);
       })
       .catch(() => {
-        console.log("Houve um erro na requisição");
+        console.log('Houve um erro na requisição');
         setLoading(false);
       });
   }, []);
